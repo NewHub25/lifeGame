@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of LIFE</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        user-select: none;
+      }
+      body {
+        height: 99vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(2, 29, 73);
+      }
+      .title {
+        color: #eee;
+      }
+      .button {
+        outline: none;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #0090de;
+        color: #eee;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in;
+        text-transform: uppercase;
+      }
+      .button.touched {
+        background-color: #009032;
+      }
+      .button.clear:hover {
+        background-color: #333;
+      }
+      #ID_CANVAS {
+        border: 1px solid #eee;
+        cursor: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">GAME OF LIFE</h1>
+    <canvas id="ID_CANVAS"></canvas>
+    <nav class="buttons">
+      <button data-button="edit-button" class="button">Edit</button>
+      <button data-button="run-button" class="button">Run</button>
+      <button data-button="random-draw-button" class="button">
+        Random dots
+      </button>
+      <button data-button="clear-button" class="button clear">Clear</button>
+    </nav>
+    <script src="./js/gameLife.js"></script>
+  </body>
+</html>
